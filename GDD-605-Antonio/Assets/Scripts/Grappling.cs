@@ -18,7 +18,7 @@ public class Grappling : MonoBehaviour
 
     [Header("Input")]
     public KeyCode swingKey = KeyCode.Mouse0;
-
+    private Vector3 currentGrapplePosition;
 
     void Update()
     {
@@ -45,8 +45,16 @@ public class Grappling : MonoBehaviour
             joint.spring = 4.5f;
             joint.damper = 7f;
             joint.massScale = 4.5f;
+
+            lr.positionCount = 2;
+            currentGrapplePosition = gunTip.position;
         }
 
+    }
+
+    private void LateUpdate()
+    {
+        
     }
 
     void StopSwing()
@@ -56,4 +64,16 @@ public class Grappling : MonoBehaviour
 
 
     }
+
+    void DrawRope()
+    {
+        if (!joint) return;
+
+        currentGrapplePosition = Vector3.Lerp(currentGrapplePosition, swingPoint, Time.deltaTime * 8f);
+
+        lr.SetPosition(0, gunTip.position);
+        lr.SetPosition(1, swingPoint);
+    }
+
+
 }
