@@ -366,6 +366,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
+  groundDrag: 5
+  jumpForce: 10
+  jumpCooldown: 0.25
+  airMultiplier: 0
+  jumpKey: 273
+  playerHeight: 3
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
   orientation: {fileID: 1268359329}
 --- !u!54 &1101713336
 Rigidbody:
@@ -570,7 +579,7 @@ GameObject:
   - component: {fileID: 1417360280}
   - component: {fileID: 1417360279}
   - component: {fileID: 1417360278}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -649,8 +658,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1417360277}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8159716, y: 1.949456, z: -0.7330731}
-  m_LocalScale: {x: 1.5834, y: 1.5834, z: 1.5834}
+  m_LocalPosition: {x: -0.81597, y: 1.949456, z: -0.73307}
+  m_LocalScale: {x: 4.8583465, y: 4.8583465, z: 4.8583465}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
