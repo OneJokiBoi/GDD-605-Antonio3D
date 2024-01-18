@@ -36,14 +36,6 @@ public class PlayerMovement : MonoBehaviour
     Vector3 moveDirection;
     Rigidbody rb;
 
-    public MovementState state;
-
-    public enum MovementState
-    {
-        swinging
-    }
-
-    public bool swinging;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();

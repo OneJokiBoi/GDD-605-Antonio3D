@@ -22,8 +22,6 @@ public class Grappling : MonoBehaviour
     private Vector3 swingPoint;
     private SpringJoint joint;
 
-
-
     [Header("Input")]
     public KeyCode swingKey = KeyCode.Mouse0;
     private Vector3 currentGrapplePosition;
@@ -119,11 +117,8 @@ public class Grappling : MonoBehaviour
 
         }
 
-
-
-
-
     }
 
+    
 
 }
