@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KillPlayer : MonoBehaviour
 {
+    public GameObject player;
+
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.CompareTag("whatIsPlayer"))
+        if(collision.collider.GameObject())
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene("You Died");
         }
     }
 }
