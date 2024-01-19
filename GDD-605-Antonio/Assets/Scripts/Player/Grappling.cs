@@ -8,7 +8,6 @@ public class Grappling : MonoBehaviour
     public LineRenderer lr;
     public Transform gunTip, cam, player;
     public LayerMask whatIsGrappleable;
-    public PlayerMovement pm;
 
     [Header("AirMovement")]
     public Transform orientation;
@@ -18,7 +17,7 @@ public class Grappling : MonoBehaviour
     public float extendCableSpeed;
 
     [Header("Swinging")]
-    private float maxSwingDistance = 25f;
+    private float maxSwingDistance = 50f;
     private Vector3 swingPoint;
     private SpringJoint joint;
 
@@ -51,8 +50,8 @@ public class Grappling : MonoBehaviour
             joint.maxDistance = distanceFromPoint * 0.8f;
             joint.minDistance = distanceFromPoint * 0.25f;
 
-            joint.spring = 4.5f;
-            joint.damper = 7f;
+            joint.spring = 10f;
+            joint.damper = 10f;
             joint.massScale = 4.5f;
 
             lr.positionCount = 2;
