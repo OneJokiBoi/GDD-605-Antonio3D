@@ -35,7 +35,7 @@ public class GunSystem : MonoBehaviour
         MyInput();
 
         //text
-        text.SetText(bulletsLeft + " / " + magazineSize);
+        //text.SetText(bulletsLeft + " / " + magazineSize);
     }
 
     private void MyInput()
@@ -57,8 +57,8 @@ public class GunSystem : MonoBehaviour
         readyToShoot = false;
 
         //RayCast
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out rayHit,
-            range, whatIsEnemy));
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out rayHit, range, whatIsEnemy));
+        Debug.Log("hit");
 
         bulletsLeft--;
         bulletsShot--;
